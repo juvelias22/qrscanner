@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 import QrReader from "react-qr-scanner";
 class QrContainer extends Component {
   constructor(props) {
@@ -55,7 +55,7 @@ class QrContainer extends Component {
 }
 
 export default QrContainer;
-
+*/
 /*
 import React, { Component } from "react";
 import QrReader from "modern-react-qr-reader";
@@ -102,4 +102,42 @@ class Test extends Component {
   }
 }
 export default Test;
-*/
+*/ import React, {
+  useState
+} from "react";
+import QrReader from "react-web-qr-reader";
+
+const Example = () => {
+  const delay = 500;
+
+  const previewStyle = {
+    height: 240,
+    width: 320
+  };
+
+  const [result, setResult] = useState("No result");
+
+  const handleScan = (result) => {
+    if (result) {
+      setResult(result);
+    }
+  };
+
+  const handleError = (error) => {
+    console.log(error);
+  };
+
+  return (
+    <>
+      <QrReader
+        delay={delay}
+        style={previewStyle}
+        onError={handleError}
+        onScan={handleScan}
+      />
+      <p>{result}</p>
+    </>
+  );
+};
+
+export default Example;
