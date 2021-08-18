@@ -1,51 +1,42 @@
-/*import React, {Component} from "react";
+import React, { Component } from "react";
 import QrReader from "react-qr-scanner";
 class QrContainer extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      result:'hold qr can be changed'
-
-    }
-    this.handlescan=this.handlescan.bind(this)
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      result: "hold qr can be changed"
+    };
+    this.handlescan = this.handlescan.bind(this);
   }
 
-  handlescan(result){
+  handlescan(result) {
     this.setState({
       result: "hello"
-    }
-    )
+    });
   }
-  handleError(err){
-    console.error(err)
+  handleError(err) {
+    console.error(err);
   }
-
-
-
 
   render() {
-    const previewStyle={
-      height : 700,
-      width : 1000,
-      display : 'flex',
+    const previewStyle = {
+      height: 700,
+      width: 1000,
+      display: "flex",
       justifycontent: "center"
-    }
+    };
 
-    const camStyle ={
-      display: 'flex',
+    const camStyle = {
+      display: "flex",
       justifycontent: "center",
-      marginTop: '-50px'
+      marginTop: "-50px"
+    };
 
-    }
-
-    const textStyle ={
-      fontSize: '30px',
-      textAlign: 'center',
-      marginTop: '-80px'
-
-    }
-
+    const textStyle = {
+      fontSize: "30px",
+      textAlign: "center",
+      marginTop: "-80px"
+    };
 
     return (
       <React.Fragment>
@@ -57,18 +48,15 @@ class QrContainer extends Component {
             onScan={this.handleScan}
           />
         </div>
-        <p style={textStyle}>
-        {this.state.result}</p>
+        <p style={textStyle}>{this.state.result}</p>
       </React.Fragment>
     );
   }
 }
 
-
-
 export default QrContainer;
-*/
 
+/*
 import React, { Component } from "react";
 import QrReader from "modern-react-qr-reader";
 
@@ -114,3 +102,4 @@ class Test extends Component {
   }
 }
 export default Test;
+*/
