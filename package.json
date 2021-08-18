@@ -8,10 +8,6 @@
   ],
   "main": "src/index.js",
   "dependencies": {
-    "@blackbox-vision/react-qr-reader": "5.0.0",
-    "cssstyle": "2.3.0",
-    "modern-react-qr-reader": "1.0.11",
-    "react": "17.0.2",
     "react-barcode-reader": "0.0.2",
     "react-dom": "17.0.2",
     "react-qr-reader": "2.2.1",
